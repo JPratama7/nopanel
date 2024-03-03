@@ -13,7 +13,6 @@ mainfont: Times New Roman
 Disini yang saya akan contohkan adalah aplikasi yang menggunakan bahasa pemrograman Go/Golang. Selain aplikasi, dibutuhkan juga *code editor* seperti *VSCode*.
 
 ![Contoh Aplikasi](image.png)
-<img src="image.png" alt="Contoh Aplikasi" width="500" height="400"/>
 
 [Link Menuju Aplikasi](https://github.com/aiteung/iteung)
 
