@@ -464,4 +464,45 @@ Setelah itu, klik tombol *Save*
 
 Setelah selesai, langkah selanjutnya adalah setup rules di *reverse proxy* server.
 
-Untuk itu selanjutnya akan masuk ke server.
+Selanjutnya akan masuk ke server.
+Untuk masuk ke server silahkan ketik `ssh <username>@<server>`
+![Server](image-71.png)
+
+Setelah itu, ketik `cd /etc/nginx/sites-enable/`
+![NGINX](image-72.png)
+
+Setelah sukses ke `/etc/nginx/sites-enable` langkah selanjutnya adalah membuat rules untuk *reverse proxy*.
+###### Catatan: Didalam foler sites-enable banyak rules, untuk mempermudah, rules yang akan digunakan adalah rules dari aplikasi KimTeungBim
+
+Untuk mempermudah pembuatan rules, disini akan digunakan rules dari aplikasi yang sudah ada, yaitu KimTeungBim.
+ketik `sudo cp kimteungbim belajarcicd`
+
+![CP KIM](image-73.png)
+
+Setelah itu, buka nano untuk mengubah rules yang ada didalam file belajarcicd
+ketik `sudo nano belajarcicd`
+
+![CICD Nano](image-78.png)
+
+Tampilan akan seperti berikut:
+
+![Nano Reverse](image-79.png)
+
+Setelah itu, ubah sub-domain kimteungbim, menjadi domain yang tadi telah dibuat, yaitu belajarcicd.
+Kemudian pada bagian `proxypass http://10.14.200.20` tambahkan port `8080` dibagian belakang menjadi seperti ini `proxypass http://10.14.200.20:8080`
+
+![Belajarcicd NGINX](image-80.png)
+
+Setelah itu save dan exit.
+
+Setelah berhasil keluar, ketik `sudo nginx -t` untuk mengecek konfigurasi nginx agar tidak ada yang konflik
+
+![Config](image-81.png)
+
+Setelah selesai, sekarang ketik `sudo nginx -s reload` untuk melakukan reload terhadap konfigurasi nginx yang telah dibuat.
+
+![Reload NGINX](image-82.png)
+
+Setelah selesai, silahkan ke `belajarcicd.ulbi.ac.id` untuk mencoba aplikasi yang sudah di *deploy* dan di *public*
+
+![Public](image-84.png)
