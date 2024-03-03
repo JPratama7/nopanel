@@ -65,6 +65,7 @@ Sebelum membuat Dockerfile, buka *project*  terlebih dahulu di *Code Editor* pil
 Setelah *project* terbuka, silahkan buat file bernama Dockerfile di *root* folder
 
 ![Create Dockerfile](image-8.png)
+
 Kemudian buka Dockerfile dengan klik 2x di nama filenya sampai muncul tampilan seperti berikut:
 
 ![Dockerfile View](image-9.png)
